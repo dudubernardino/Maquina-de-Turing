@@ -1,6 +1,7 @@
-# Equipe: Eduardo de Moura Bernardino - 1469757
-#         Raimundo Angeliano
-#         Vinícius Linhares Alves de Oliveira - 1469823
+# Equipe: 
+#Eduardo de Moura Bernardino - 1469757
+#Raimundo Angeliano Gonçalves de Sousa - 1476646
+#Vinícius Linhares Alves de Oliveira - 1469823
 
 import os
 import numpy
