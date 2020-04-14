@@ -1,5 +1,5 @@
 alfabeto:a,b
 alfabet0_aux:A,B
-trans_q0:[#,#,DIR,q0],[a,A,DIR,q1],[B,B,DIR,q3],[' ',' ',DIR,q4]
-trans_q1:[#,#,DIR,q0],[a,A,DIR,q1],[B,B,DIR,q3],[' ',' ',DIR,q4]
-trans_q2:[#,#,DIR,q0],[a,A,DIR,q1],[B,B,DIR,q3],[' ',' ',DIR,q4]
+trans_q0:[#,#,DIR,q0];[a,A,DIR,q1];[B,B,DIR,q3];[' ',' ',DIR,q4]
+trans_q1:[#,#,DIR,q0];[a,A,DIR,q1],[B,B,DIR,q3];[' ',' ',DIR,q4]
+trans_q2:[#,#,DIR,q0];[a,A,DIR,q1];[B,B,DIR,q3];[' ',' ',DIR,q4]

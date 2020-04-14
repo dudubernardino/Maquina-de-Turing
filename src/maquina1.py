@@ -1,5 +1,6 @@
 from turing import *
 from ler_arquivo import *
+import json 
 
 arquivo = ler_arquivo('src/config.txt')
 arquivo.get_linhas()
@@ -7,17 +8,41 @@ arquivo.get_linhas()
 # Separa as transições em variáveis
 for i in range(len(arquivo.transicoes)):
     for transicao in arquivo.transicoes[i]:
-      globals()["trans_q" + str(i)] = transicao
+      globals()["trans_q" + str(i)] = transicao.replace('[', '').replace(']', '').split(';')
+      
 
 print(trans_q0)
+print(trans_q1)
+print(trans_q2)
+print('-----------------------------------------------')
+
+DIR = True
+ESQ = False
+
+
+nova_transicao = []
+for i in trans_q0:
+  transicao = i.split(',')
+  for direcao in transicao:
+    if "DIR" in direcao:
+      direcao = DIR
+    elif "ESQ" in direcao:
+      direcao = ESQ
+    nova_transicao.append(direcao)
+
+print(nova_transicao)
+
+print('--------------------------')
+a = []
+for i in range(4):
+  a.append(nova_transicao[i])
+
+print(a)
 
 '''
 Maquina de Turing 1
 L = (a^n)(b^n)
 '''
-
-DIR = True
-ESQ = False
 
 alfabeto = arquivo.alfabeto
 alfabeto_aux = arquivo.alfabeto_aux

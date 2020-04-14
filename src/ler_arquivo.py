@@ -19,6 +19,7 @@ class ler_arquivo():
         self.alfabeto_aux = list(filter(
           None, linha.split(':')[1].split(',')
         ))
+        
       elif "trans_q" in linha:
         linha = linha.rstrip()
         self.transicoes.append(list(filter(
