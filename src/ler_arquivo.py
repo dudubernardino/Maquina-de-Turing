@@ -19,13 +19,30 @@ class ler_arquivo():
         self.alfabeto_aux = list(filter(
           None, linha.split(':')[1].split(',')
         ))
-        
+      
+      elif "estados" in linha:
+        linha = linha.rstrip()
+        self.estados = list(filter(
+          None, linha.split(':')[1].split(',')
+        ))
+      
       elif "trans_q" in linha:
         linha = linha.rstrip()
         self.transicoes.append(list(filter(
             None, linha.split(':')[1].split('[]')
           )))
-            
 
+      elif "estado_inicial" in linha:
+        linha = linha.rstrip()
+        self.estado_inicial = list(filter(
+          None, linha.split(':')[1].split(',')
+        ))
+      
+      elif "simbolo_inicial" in linha:
+        linha = linha.rstrip()
+        self.simbolo_inicial = list(filter(
+          None, linha.split(':')[1].split(',')
+        ))
+        
 
-#globals()["trans_q" + str(i)] = arquivo.transicoes[i]
+    
