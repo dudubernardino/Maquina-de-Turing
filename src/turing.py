@@ -83,7 +83,7 @@ class turing():
         
     def get_estado(self,nome):
         for estado in self.estados:
-            if estado.get_nome() is nome:
+            if estado.get_nome() == nome:
                 return estado
                 break
                 

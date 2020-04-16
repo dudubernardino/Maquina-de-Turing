@@ -43,6 +43,5 @@ class ler_arquivo():
         self.simbolo_inicial = list(filter(
           None, linha.split(':')[1].split(',')
         ))
-        
 
     
