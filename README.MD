@@ -58,7 +58,7 @@ Este programa foi desenvolvido de modo a simular o processamento de uma Máquina
 - Para executar a máquina, vá até o arquivo maquina.py e use a função run para escolher uma cadeia a ser analisada.
 
 ```
-  turing = turing(alfabeto,[q0,q1,q2,q3,q4],estado_inicial,alfabeto_aux,simbolo_inicial,' ')
+  turing = turing(alfabeto,estados,estado_inicial,alfabeto_aux,simbolo_inicial,' ')
   turing.run("ab")
   turing.run("aabb")
   turing.run("aaab")
