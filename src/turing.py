@@ -13,7 +13,7 @@ class turing():
         self.cabeca = 0
         self.estado_atual = self.estado_inicial
         
-    def aceita(self,cadeia,passos=True):
+    def run(self,cadeia,passos=True):
         self.cabeca = 0
         self.fita = self.simb_inicio + cadeia + self.simb_branco
         self.estado_atual = self.estado_inicial

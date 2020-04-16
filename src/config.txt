@@ -8,4 +8,3 @@ trans_q3:[B,B,DIR,q3];[' ',' ',DIR,q4]
 trans_q4:[[]]
 estado_inicial:q0
 simbolo_inicial:#
-simbolo_branco:branco
