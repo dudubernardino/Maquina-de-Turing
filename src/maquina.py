@@ -56,9 +56,16 @@ for i in range(len(arquivo.estados)):
 # q3 = estado("q3",trans_q3)
 # q4 = estado("q4",trans_q4,is_final=True)
 
-
+# Máquina da config.txt
 turing = turing(alfabeto,estados,estado_inicial,alfabeto_aux,simbolo_inicial,' ')
 turing.run("ab")
 turing.run("aabb")
 turing.run("aaab")
 turing.run("aaaabbbb")
+
+# Máquina da config2.txt
+# turing = turing(alfabeto,estados,estado_inicial,alfabeto_aux,simbolo_inicial,' ')
+# turing.run("")
+# turing.run("aabbcc")
+# turing.run("aaabbbccc")
+# turing.run("abbc")
