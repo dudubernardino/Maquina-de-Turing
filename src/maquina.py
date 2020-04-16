@@ -9,12 +9,11 @@ ESQ = False
 
 alfabeto = arquivo.alfabeto
 alfabeto_aux = arquivo.alfabeto_aux
-estados = arquivo.estados
+estados = []
 estado_inicial = arquivo.estado_inicial[0]
 simbolo_inicial = arquivo.simbolo_inicial[0]
 
 # Organizando Transições
-print(len(arquivo.transicoes))
 nova_transicao = []
 for i in range(len(arquivo.transicoes)):
   for transicao in arquivo.transicoes[i]:
@@ -49,6 +48,7 @@ for i in range(len(arquivo.estados)):
   globals()["q" + str(i)] = estado(f'q{i}',globals()["trans_q" + str(i)])
   if i == (len(arquivo.estados) - 1):
     globals()["q" + str(i)] = estado(f'q{i}',globals()["trans_q" + str(i)],is_final=True)
+  estados.append(globals()["q" + str(i)])
 
 # q0 = estado("q0",trans_q0)
 # q1 = estado("q1",trans_q1)
@@ -56,7 +56,8 @@ for i in range(len(arquivo.estados)):
 # q3 = estado("q3",trans_q3)
 # q4 = estado("q4",trans_q4,is_final=True)
 
-turing = turing(alfabeto,[q0,q1,q2,q3,q4],estado_inicial,alfabeto_aux,simbolo_inicial,' ')
+
+turing = turing(alfabeto,estados,estado_inicial,alfabeto_aux,simbolo_inicial,' ')
 turing.run("ab")
 turing.run("aabb")
 turing.run("aaab")

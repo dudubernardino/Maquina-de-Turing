@@ -38,7 +38,32 @@ Este programa foi desenvolvido de modo a simular o processamento de uma Máquina
 
 ## Exemplo
 
-- Em desenvolvimento
+- Utilize o arquivo `config.txt` para inserir a definição formal da Máquina de Turing
+
+```
+  alfabeto:a,b
+  alfabet0_aux:A,B
+  estados:q0,q1,q2,q3,q4
+  trans_q0:[#,#,DIR,q0];[a,A,DIR,q1];[B,B,DIR,q3];[' ',' ',DIR,q4]
+  trans_q1:[b,B,ESQ,q2];[a,a,DIR,q1];[B,B,DIR,q1]
+  trans_q2:[A,A,DIR,q0];[a,a,ESQ,q2];[B,B,ESQ,q2]
+  trans_q3:[B,B,DIR,q3];[' ',' ',DIR,q4]
+  trans_q4:[[]]
+  estado_inicial:q0
+  simbolo_inicial:#
+```
+
+- Mantenha a sintaxe apresentada no config.txt, utilizando DIR e ESQ para o movimento do cabeçote e ' ' para o simbolo branco, com o espaçamento adequado.
+
+- Para executar a máquina, vá até o arquivo maquina.py e use a função run para escolher uma cadeia a ser analisada.
+
+```
+  turing = turing(alfabeto,[q0,q1,q2,q3,q4],estado_inicial,alfabeto_aux,simbolo_inicial,' ')
+  turing.run("ab")
+  turing.run("aabb")
+  turing.run("aaab")
+  turing.run("aaaabbbb")
+```
 
 ## Contributing
 
