@@ -51,19 +51,12 @@ Este programa foi desenvolvido de modo a simular o processamento de uma Máquina
   trans_q4:[[]]
   estado_inicial:q0
   simbolo_inicial:#
+  cadeias:ab,aabb,aaab,aaaabbbb
 ```
 
 - Mantenha a sintaxe apresentada no config.txt, utilizando DIR e ESQ para o movimento do cabeçote e ' ' para o simbolo branco, com o espaçamento adequado.
 
-- Para executar a máquina, vá até o arquivo maquina.py e use a função run para escolher uma cadeia a ser analisada.
-
-```
-  turing = turing(alfabeto,estados,estado_inicial,alfabeto_aux,simbolo_inicial,' ')
-  turing.run("ab")
-  turing.run("aabb")
-  turing.run("aaab")
-  turing.run("aaaabbbb")
-```
+- Para executar a máquina basta utilizar o comando `python3 src/maquina.py`
 
 ## Contributing
 

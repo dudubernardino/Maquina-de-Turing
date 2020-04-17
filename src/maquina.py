@@ -4,6 +4,8 @@ from ler_arquivo import *
 arquivo = ler_arquivo('src/config.txt')
 arquivo.get_linhas()
 
+print(arquivo.cadeias)
+
 DIR = True
 ESQ = False
 
@@ -56,15 +58,33 @@ for i in range(len(arquivo.estados)):
 # q3 = estado("q3",trans_q3)
 # q4 = estado("q4",trans_q4,is_final=True)
 
+# ----------------------------------------------------- Máquina 1 - config.txt -------------------------------
+
 # Máquina da config.txt
 turing = turing(alfabeto,estados,estado_inicial,alfabeto_aux,simbolo_inicial,' ')
-turing.run("ab")
-turing.run("aabb")
-turing.run("aaab")
-turing.run("aaaabbbb")
+
+# Lê as cadeias
+for i in range(len(arquivo.cadeias)):
+  if arquivo.cadeias[i] == "''":
+    arquivo.cadeias[i] = ""
+  turing.run(arquivo.cadeias[i])
+  
+# turing.run("ab")
+# turing.run("aabb")
+# turing.run("aaab")
+# turing.run("aaaabbbb")
+
+# ----------------------------------------------------- Máquina 1 - config2.txt ------------------------------
 
 # Máquina da config2.txt
 # turing = turing(alfabeto,estados,estado_inicial,alfabeto_aux,simbolo_inicial,' ')
+
+# Lê as cadeias
+# for i in range(len(arquivo.cadeias)):
+#   if arquivo.cadeias[i] == "''":
+#     arquivo.cadeias[i] = ""
+#   turing.run(arquivo.cadeias[i])
+
 # turing.run("")
 # turing.run("aabbcc")
 # turing.run("aaabbbccc")

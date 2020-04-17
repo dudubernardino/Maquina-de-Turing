@@ -9,3 +9,4 @@ trans_q4:[z,z,DIR,q4];[y,y,DIR,q4];[' ',' ',DIR,q5]
 trans_q5:[[]]
 estado_inicial:q0
 simbolo_inicial:#
+cadeias:'',aabbcc,aaabbbccc,abbc

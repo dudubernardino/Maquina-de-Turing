@@ -43,5 +43,11 @@ class ler_arquivo():
         self.simbolo_inicial = list(filter(
           None, linha.split(':')[1].split(',')
         ))
+      
+      elif "cadeia" in linha:
+        linha = linha.rstrip()
+        self.cadeias = list(filter(
+          None, linha.split(':')[1].split(',')
+        ))
 
     
